@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import {FiSettings, FiLink2} from 'react-icons/fi'
 import {
     AiOutlineQuestionCircle, 
@@ -8,11 +8,12 @@ import {
 
 const Modal = ({show, value, onShow}) => {
 
-    
+    const [copyStatus, setCopyStatus ] = useState(false)
 
     useEffect(()=> {
         const modal = document.getElementById("modal")
         const doneBtn = document.querySelector('#done')
+        const copyBtn = document.querySelector('.copy-link')
 
         modal.removeAttribute('open')
         if (show){
@@ -30,6 +31,18 @@ const Modal = ({show, value, onShow}) => {
         }
 
     },[show])
+
+
+    // set timer for turn off link copied status after 5000ms
+    const timer = setTimeout(() => {
+        setCopyStatus(false)
+    }, 5000);
+
+    const handleLink = () => {
+        setCopyStatus(true)
+        timer()
+    }
+
 
   return (
     <dialog 
@@ -69,7 +82,7 @@ const Modal = ({show, value, onShow}) => {
                 </div>
             </div>
             <div className="footer">
-                <button className='copy-link'>
+                <button className='copy-link' onClick={() => {handleLink()}}>
                     <FiLink2 /> Copy link
                 </button>
                 <button 
@@ -78,6 +91,11 @@ const Modal = ({show, value, onShow}) => {
                 >
                     Done
                 </button>
+            </div> 
+            <div className={copyStatus ? "copy-status copy-status-active":"copy-status"}>
+                <span>
+                    Link Copied
+                </span>
             </div>
          </div>
     </dialog>
