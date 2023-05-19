@@ -240,6 +240,12 @@ body{
 .container .ql-font span[data-value="Lobster"]::before {
   font-family: "Lobster";
 }
+.container .ql-font span[data-value="Prata"]::before {
+  font-family: "Prata";
+}
+.container .ql-font span[data-value="Playfair Display"]::before {
+  font-family: "Playfair Display";
+}
 
 /* Set content font-families */
 .ql-font-Lobster {
@@ -248,6 +254,13 @@ body{
 .ql-font-Merriweather {
   font-family: "Merriweather";
 }
+.ql-font-Prata {
+  font-family: "Merriweather";
+}
+.ql-font-PlayDisplay {
+  font-family: "Merriweather";
+}
+
 
 .ql-snow .ql-picker.ql-font .ql-picker-label::before,
 .ql-snow .ql-picker.ql-font .ql-picker-item::before {

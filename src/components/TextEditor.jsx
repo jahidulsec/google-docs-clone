@@ -8,7 +8,7 @@ import Quill from 'quill'
 // Add fonts to whitelist
 var Font = Quill.import('formats/font');
 // We do not add Aref Ruqaa since it is the default
-var fonts = ['Roboto','Merriweather', 'Lobster']
+var fonts = ['Roboto','Merriweather', 'Lobster', 'Prata']
 Font.whitelist = fonts;
 Quill.register(Font, true);
 
