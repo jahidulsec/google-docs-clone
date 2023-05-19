@@ -149,6 +149,8 @@ body{
 
 /* text editor */
 
+
+
 .container .ql-editor{
   width: 8.5in;
   min-height: 11in;
@@ -170,6 +172,7 @@ body{
 
 .container .ql-toolbar{
   display: flex;
+  width: 100%;
   /* justify-content: center; */
   align-items: center;
   position: sticky;
@@ -179,7 +182,7 @@ body{
   border: 1px solid var(--clr-300);
   border-radius: 50px;
   margin: 0 1rem;
-  padding: 5px 8px;
+  padding: 5px 1rem 5px 2rem;
 }
 
 .ql-formats{
