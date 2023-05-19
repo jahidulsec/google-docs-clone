@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {AiOutlineStar, AiOutlineQuestionCircle} from 'react-icons/ai'
 import {RiFolderTransferLine, RiHistoryFill} from 'react-icons/ri'
 import {MdOutlineCloudDone, MdOutlineInsertComment} from 'react-icons/md'
@@ -7,7 +7,11 @@ import Dropdown from './Dropdown'
 
 
 const Header = ({value, onValue, onShow}) => {
-    console.log(value)
+
+    const [screenDesktop,setScreenDesktop] = useState('')
+    
+
+
 
   return (
     <header className='header-section text-dark'>
