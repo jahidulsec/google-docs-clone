@@ -34,13 +34,13 @@ const Modal = ({show, value, onShow}) => {
 
 
     // set timer for turn off link copied status after 5000ms
-    const timer = setTimeout(() => {
-        setCopyStatus(false)
-    }, 5000);
+    
 
     const handleLink = () => {
         setCopyStatus(true)
-        timer()
+        setTimeout(() => {
+            setCopyStatus(false)
+        }, 3000);
     }
 
 
