@@ -171,10 +171,10 @@ body{
 
 .container .ql-toolbar{
   max-width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 1111;
   background-color: var(--clr-300);
   border: 1px solid var(--clr-300);
   border-radius: 50px;
@@ -196,7 +196,17 @@ body{
   content: attr(data-value) !important;
 }
 
+strong{
+  font-weight: 600;
+}
 
+strong > em {
+  font-weight: 600;
+}
+
+strong > em > u {
+  font-weight: 600;
+}
 
 
 @page {

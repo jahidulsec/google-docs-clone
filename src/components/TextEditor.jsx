@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react'
-import second from 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.snow.css'
 import Quill from 'quill'
 
 // Quill JS is a build in librery of text editor
